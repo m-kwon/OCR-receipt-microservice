@@ -1,0 +1,38 @@
+{
+  "name": "ocr-receipt-microservice",
+  "version": "1.0.0",
+  "description": "Optical Character Recognition (OCR) microservice automatically extracts structured data from receipt images.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-kwon/OCR-receipt-microservice.git"
+  },
+    "keywords": [
+    "ocr",
+    "receipt",
+    "healthcare",
+    "microservice",
+    "rxreceipts"
+  ],
+  "author": "Matthew Kwon",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/m-kwon/OCR-receipt-microservice/issues"
+  },
+  "homepage": "https://github.com/m-kwon/OCR-receipt-microservice#readme",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
