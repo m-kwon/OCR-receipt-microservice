@@ -137,3 +137,10 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+eng.traineddata
+test-receipt.png
+/temp
+/node_modules
+.env
+test_images/
