@@ -11,7 +11,6 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5002;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
@@ -103,7 +102,6 @@ app.post('/ocr/extract', upload.single('file'), async (req, res) => {
 
     console.log(`Processing file: ${originalname} (${mimetype})`);
 
-    // Extract text based on file type
     if (mimetype === 'application/pdf') {
       extractedText = await extractTextFromPDF(buffer);
     } else if (mimetype.startsWith('image/')) {
@@ -153,7 +151,6 @@ app.post('/ocr/extract', upload.single('file'), async (req, res) => {
   }
 });
 
-// Alternative endpoint that accepts image ID from image_service
 app.post('/ocr/extract-by-id', async (req, res) => {
   const startTime = Date.now();
 
@@ -167,7 +164,6 @@ app.post('/ocr/extract-by-id', async (req, res) => {
       });
     }
 
-    // Fetch image from image service
     const imageServiceUrl = process.env.IMAGE_SERVICE_URL || 'http://localhost:5001';
     const imageUrl = `${imageServiceUrl}/image/${image_id}`;
 
